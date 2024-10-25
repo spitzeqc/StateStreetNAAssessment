@@ -133,5 +133,10 @@ public class CarTest {
                 LocalDate.parse("1901-01-10"),
                 LocalDate.parse("1901-01-12"))
         ); // entire date is within existing date
+
+        Assertions.assertFalse( availableTest.isAvailable(
+                LocalDate.parse("1900-12-31"),
+                LocalDate.parse("1901-02-02"))
+        ); // entire date encompasses existing date
     }
 }

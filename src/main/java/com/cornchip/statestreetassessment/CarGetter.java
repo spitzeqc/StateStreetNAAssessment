@@ -39,7 +39,8 @@ public abstract class CarGetter {
      *
      * @param carToFix The Car object within the list to re-sort
      */
-    // NOTE: We define an update function to optimize the process. Once everything is sorted once, only one car should really change at a time
+    // NOTE: We define an update function to optimize the process.
+    // Once everything is sorted once, only one car should really change at a time
     abstract void update(Car carToFix);
 
     /**
@@ -48,10 +49,4 @@ public abstract class CarGetter {
     // NOTE: We add a sort function to perform the initial sort
     // Can be rerun occasionally to ensure accurate internal lists
     abstract void sort();
-
-    @Override
-    public String toString() {
-
-        return "";
-    }
 }

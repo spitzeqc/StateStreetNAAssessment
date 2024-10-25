@@ -83,6 +83,10 @@ public class Main {
 
                 try {
                     endDate = LocalDate.parse(endString);
+                    if( endDate.isBefore(startDate) ) {
+                        System.out.println("Start date (" + startDate + ") is after End date (" + endDate + ")");
+                        continue;
+                    }
                     running = false;
                 } catch (DateTimeParseException e) {
                     System.out.println("Unable to parse date (" + endString + ")");
